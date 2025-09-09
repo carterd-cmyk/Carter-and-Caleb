@@ -6,7 +6,9 @@ package frc.robot.commands;
 
 import frc.robot.subsystems.ExampleSubsystem;
 import edu.wpi.first.wpilibj2.command.Command;
+
 // making a comment
+
 import edu.wpi.first.wpilibj2.command.Commands;
 
 public final class Autos {
@@ -14,8 +16,13 @@ public final class Autos {
   public static Command exampleAuto(ExampleSubsystem subsystem) {
     return Commands.sequence(subsystem.exampleMethodCommand(), new ExampleCommand(subsystem));
   }
+
 //fake error
+
   private Autos() {
     throw new UnsupportedOperationException("This is a utility class!");
   }
 }
+
+//im the coolest
+

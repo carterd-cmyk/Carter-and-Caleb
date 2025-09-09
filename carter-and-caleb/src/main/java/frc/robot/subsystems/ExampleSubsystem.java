@@ -13,7 +13,7 @@ public class ExampleSubsystem extends SubsystemBase {
 
   /**
    * Example command factory method.
-   * 
+
    * @return a command
    */
   public Command exampleMethodCommand() {
@@ -79,51 +79,3 @@ public class ExampleSubsystem extends SubsystemBase {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  // big void 
-  @Override
-  public void periodic() {
-    // above line is an error
-    // This method will be called once per scheduler run
-  }
-
-  @Override
-  public void simulationPeriodic() {
-    // This method will be called once per scheduler run during simulation
-  }
-}
