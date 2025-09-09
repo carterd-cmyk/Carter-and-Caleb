@@ -13,7 +13,7 @@ public class ExampleSubsystem extends SubsystemBase {
 
   /**
    * Example command factory method.
-   *
+   * 
    * @return a command
    */
   public Command exampleMethodCommand() {
@@ -35,8 +35,90 @@ public class ExampleSubsystem extends SubsystemBase {
     return false;
   }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // big void 
   @Override
   public void periodic() {
+    // above line is an error
     // This method will be called once per scheduler run
   }
 
