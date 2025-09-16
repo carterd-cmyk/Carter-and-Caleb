@@ -4,14 +4,19 @@
 
 package frc.robot.subsystems;
 
+import com.fasterxml.jackson.annotation.JsonTypeInfo.Id;
+
 import edu.wpi.first.wpilibj.motorcontrol.Talon;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class AwesomeSauceSubsystem extends SubsystemBase {
   /** Creates a new AwesomeSauce. */
-  public AwesomeSauceSubsystem() {}
+  
+  //private TalonFX AwesomeSauceMotor;
 
-  private
+  public AwesomeSauceSubsystem() {
+    //AwesomeSauceMotor = new Talon();
+  }
 
   @Override
   public void periodic() {
