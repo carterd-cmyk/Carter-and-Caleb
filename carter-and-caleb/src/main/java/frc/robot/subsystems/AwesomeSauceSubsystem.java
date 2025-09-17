@@ -4,22 +4,40 @@
 
 package frc.robot.subsystems;
 
-import com.fasterxml.jackson.annotation.JsonTypeInfo.Id;
+import com.ctre.phoenix6.hardware.TalonFX;
 
-import edu.wpi.first.wpilibj.motorcontrol.Talon;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class AwesomeSauceSubsystem extends SubsystemBase {
-  /** Creates a new AwesomeSauce. */
-  
-  //private TalonFX AwesomeSauceMotor;
+
+  private TalonFX AwesomeSauceMotor;
 
   public AwesomeSauceSubsystem() {
-    //AwesomeSauceMotor = new Talon();
+    AwesomeSauceMotor = new TalonFX(1);
   }
+
+  public void spinAwesomeSauceMotor() {
+    AwesomeSauceMotor.setVoltage(5);
+  }
+
+public void stopAwesomeSauce() {
+  AwesomeSauceMotor.setVoltage(0);
+}
+
+public void MoveAwesomeSauce(double speed) {
+  AwesomeSauceMotor.setVoltage(speed* 10);
+}
+
 
   @Override
   public void periodic() {
-    // This method will be called once per scheduler run
+    AwesomeSauceMotor.setVoltage(5);
   }
+
+
+// Im the coolest
+
+  
 }
+
+
