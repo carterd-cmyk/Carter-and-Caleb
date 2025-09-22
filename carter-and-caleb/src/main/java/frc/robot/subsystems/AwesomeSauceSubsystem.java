@@ -20,7 +20,7 @@ public class AwesomeSauceSubsystem extends SubsystemBase {
     AwesomeSauceMotor.setVoltage(5);
   }
 
-public void stopAwesomeSauce() {
+public void stopAwesomeSauceMotor() {
   AwesomeSauceMotor.setVoltage(0);
 }
 
