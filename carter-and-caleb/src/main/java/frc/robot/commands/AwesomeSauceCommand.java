@@ -29,5 +29,8 @@ public class AwesomeSauceCommand extends InstantCommand {
 
   // Called when the command is initially scheduled.
   @Override
-  public void initialize() {}
+  public void initialize() {
+    AwesomeSauceObject.spinAwesomeSauceMotor();
+  }
+
 }
