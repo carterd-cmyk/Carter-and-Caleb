@@ -22,7 +22,7 @@ public class AwesomeSauceCommand extends InstantCommand {
   private AwesomeSauceSubsystem AwesomeSauceObject;
  
   public AwesomeSauceCommand(AwesomeSauceSubsystem subsystem) {
-    AwesomeSauceObject = new AwesomeSauceSubsystem();
+    AwesomeSauceObject = subsystem;
     // Use addRequirements() here to declare subsystem dependencies.
     addRequirements(subsystem);
   }
