@@ -10,34 +10,55 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class AwesomeSauceSubsystem extends SubsystemBase {
 
+  public enum LauncherState {
+    S_empty, S_filled, S_launching
+  }
+
+  public static LauncherState mLauncherState;
+
   private TalonFX AwesomeSauceMotor;
 
   public AwesomeSauceSubsystem() {
     AwesomeSauceMotor = new TalonFX(1);
+    mLauncherState = LauncherState.S_empty;
   }
 
   public void spinAwesomeSauceMotor() {
     AwesomeSauceMotor.setVoltage(5);
   }
 
-public void stopAwesomeSauceMotor() {
+  public void stopAwesomeSauceMotor() {
   AwesomeSauceMotor.setVoltage(0);
-}
-
-public void MoveAwesomeSauce(double speed) {
-  AwesomeSauceMotor.setVoltage(speed* 10);
-}
-
-
-  @Override
-  public void periodic() {
-    AwesomeSauceMotor.setVoltage(5);
   }
+
+  public void MoveAwesomeSauce() {
+  AwesomeSauceMotor.setVoltage(10);
+  }
+
+  public void runLauncherState(){
+    switch(mLauncherState){
+      case S_empty:
+      spinAwesomeSauceMotor();
+      break;
+      case S_filled:
+      stopAwesomeSauceMotor();
+      break;
+      case S_launching:
+      MoveAwesomeSauce();
+      break;
+    }
+
+  }
+@Override
+  public void periodic() {
+    runLauncherState();
 
 
 // Im the coolest
 
-  
 }
+
+}
+
 
 
